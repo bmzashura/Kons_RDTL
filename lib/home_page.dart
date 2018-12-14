@@ -62,7 +62,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
           tabs: <Widget>[
               new Tab(icon: new Icon(Icons.book),text: ('Preamblu'),),
               new Tab(icon: new Icon(Icons.bookmark),text: ('Konstitusaun'),),
-              new Tab(icon: new Icon(Icons.star),text: ('Favoritu'),),
+              new Tab(icon: new Icon(Icons.star),text: ('Konaba'),),
           ],
          ),
       ),
