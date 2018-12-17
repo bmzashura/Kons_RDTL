@@ -36,7 +36,6 @@ flutter:
   #  - images/a_dot_burr.jpeg
   #  - images/a_dot_ham.jpeg
   assets:
-    - img/splash.jpg
     - img/logo.png
     - img/zero2.jpg
     - img/member1.jpg
