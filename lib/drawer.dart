@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:konstitusaun/navigator.dart';
 
 class KDrawer extends StatelessWidget {
   @override
@@ -41,7 +42,7 @@ class KDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            onTap: () => null //{Navigator.of(context).push(new MaterialPageRoute<Null>(builder: (BuildContext context){return new MyApp();}));},
+            onTap: () => MyNavigator.goToHome(context)//{Navigator.of(context).push(new MaterialPageRoute<Null>(builder: (BuildContext context){return new MyApp();}));},
           ),
           new GestureDetector(
             child: new Container(
@@ -148,21 +149,6 @@ class KDrawer extends StatelessWidget {
               ),
             ),
             onTap: () { /*...*/ },
-          ),
-          new GestureDetector(
-            child: new Container(
-              width: 280.0,
-              margin: const EdgeInsets.all(4.0),
-              padding: const EdgeInsets.all(4.0),
-              child: new Text(
-                "About",
-                style: new TextStyle(
-                  fontWeight: FontWeight.w300,
-                  fontSize: 16.0,
-                ),
-              ),
-            ),
-            onTap: () => null //{Navigator.of(context).push(new MaterialPageRoute<Null>(builder: (BuildContext context){return new One();}));}
           ),
           new GestureDetector(
             child: new Container(

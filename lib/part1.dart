@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:konstitusaun/data.dart';
 
-class Favoritu extends StatefulWidget {
+class Konaba extends StatefulWidget {
   @override
-  _FavorituState createState() => _FavorituState();
+  _KonabaState createState() => _KonabaState();
 }
 
-class _FavorituState extends State<Favoritu> {
+class _KonabaState extends State<Konaba> {
 
 
 
@@ -41,10 +41,10 @@ class _FavorituState extends State<Favoritu> {
       var item = lArtigu[artigu];
 
     
-      if (item.paragraf 
+      if (item.parte
           .toString() 
           .toLowerCase()
-          .contains('soberania'.toString().toLowerCase()))   {
+          .endsWith('PARTE I'.toString().toLowerCase()))   {
         _searchListItems.add(item);
       }
     }
