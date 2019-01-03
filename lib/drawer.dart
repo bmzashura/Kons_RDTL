@@ -42,7 +42,7 @@ class KDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            onTap: () => MyNavigator.goToHome(context)//{Navigator.of(context).push(new MaterialPageRoute<Null>(builder: (BuildContext context){return new MyApp();}));},
+            onTap: () => MyNavigator.goToIda(context)//{Navigator.of(context).push(new MaterialPageRoute<Null>(builder: (BuildContext context){return new MyApp();}));},
           ),
           new GestureDetector(
             child: new Container(

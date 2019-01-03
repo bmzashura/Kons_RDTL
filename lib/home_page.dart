@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:konstitusaun/drawer.dart';
 import 'package:konstitusaun/preamblu_page.dart' as preamblu ;
 import 'package:konstitusaun/konstitusaun_page.dart' as kons;
-import 'package:konstitusaun/part1.dart' as kon; 
+import 'package:konstitusaun/konaba.dart'as kon; 
 import 'dart:async';
 import 'dart:io';
 

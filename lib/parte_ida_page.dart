@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:konstitusaun/data.dart';
+import 'package:konstitusaun/drawer.dart';
 
-class Konaba extends StatefulWidget {
+class Ida extends StatefulWidget {
   @override
-  _KonabaState createState() => _KonabaState();
+  _IdaState createState() => _IdaState();
 }
 
-class _KonabaState extends State<Konaba> {
+class _IdaState extends State<Ida> {
 
 
 
-  List<ListArtigu> _searchListItems;
+  List<ListArtigu> _idaListItems;
 
   @override
   void initState() {
@@ -20,14 +21,23 @@ class _KonabaState extends State<Konaba> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Container(
+      child:  Scaffold(
+      drawer: new KDrawer(),
+      appBar: new AppBar(
+         centerTitle: true,
+          title: new Text('Parte Ida'),
+          automaticallyImplyLeading: true,
+      ),
+
       body: new Container(
         margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
         child: new Column(
           children: <Widget>[
-            _searchListView() 
+            _idaListView() 
           ],
         ),
+      ),
       ),
     );
   }
@@ -35,8 +45,8 @@ class _KonabaState extends State<Konaba> {
 
 
 
-  Widget _searchListView() {
-    _searchListItems =  List<ListArtigu>();
+  Widget _idaListView() {
+    _idaListItems =  List<ListArtigu>();
     for (int artigu = 0; artigu < lArtigu.length; artigu++) {
       var item = lArtigu[artigu];
 
@@ -45,7 +55,7 @@ class _KonabaState extends State<Konaba> {
           .toString() 
           .toLowerCase()
           .endsWith('PARTE I'.toString().toLowerCase()))   {
-        _searchListItems.add(item);
+        _idaListItems.add(item);
       }
     }
     return _searchAddList();
@@ -55,12 +65,12 @@ class _KonabaState extends State<Konaba> {
   Widget _searchAddList() {
     return new Flexible(
       child: new ListView.builder(
-          itemCount: _searchListItems.length,
+          itemCount: _idaListItems.length,
           itemBuilder: (BuildContext context, int index) {
             return new InkWell(
               onTap: () => Navigator.of(context).push(new MaterialPageRoute(
                     builder: (BuildContext context) => new Detail(
-                          lartigu: _searchListItems[index],
+                          lartigu: _idaListItems[index],
                         ),
                   )),
               child: new Card(
@@ -72,7 +82,7 @@ class _KonabaState extends State<Konaba> {
                     ),
                     new Icon(Icons.bookmark),
                     Padding(padding: EdgeInsets.only(right:20.0),),
-                    new Text("${_searchListItems[index].artigu}", textAlign: TextAlign.left),
+                    new Text("${_idaListItems[index].artigu}", textAlign: TextAlign.left),
                   ],
                 ),
               ),
