@@ -40,9 +40,9 @@ class _KonstitusaunState extends State<Konstitusaun> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new Container(
-        margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-        child: new Column(
+      body: Container(
+        //margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+        child:  Column(
           children: <Widget>[
             _searchBox(),
             _isSearch ? _listView() : _searchListView()

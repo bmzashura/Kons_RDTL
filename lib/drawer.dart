@@ -11,7 +11,7 @@ class KDrawer extends StatelessWidget {
         children: <Widget>[
           new Container(
             color: Colors.red,
-            height: 180.0,
+            height: 140.0,
           ),
           new GestureDetector(
             child: new Container(
